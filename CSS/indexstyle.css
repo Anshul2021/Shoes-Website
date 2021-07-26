@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* --------------header-------------- */
+header {
+  height: auto;
+}
+
+header .logo {
+  float: left;
+  margin: 1.2rem 4rem;
+  height: 4.5rem;
+  width: auto;
+}
+
+/* -------------navigation bar------------ */
+.navbar {
+  padding: 1.5rem 0rem;
+  margin: 2rem 4rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: sticky;
+  top: 10px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul a {
+  text-decoration: none;
+}
+
+.navbar ul li {
+  color: #4b4f58;
+  padding: 1rem 1.5rem;
+  font-size: 1.5rem;
+  font-family: "Work Sans", sans-serif;
+}
+
+.navbar ul li:hover {
+  color: #2f9ee2;
+  transition: 0.2s linear;
+}
+
+.navbar ul .btn1 {
+  padding: 0.9rem 0.9rem;
+  background: transparent;
+  color: #2f9ee2;
+  border: 2px solid #2f9ee2;
+  border-radius: 0px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.navbar ul .btn1:hover {
+  background-color: #4b7bec;
+  color: white;
+  transition: 0.3s ease-in;
+}
+
+.navbar ul .btn1 .fa-shopping-bag {
+  padding: 2px 8px;
+}
+
+/* ------------shoes background------------ */
+
+header .shoes .front {
+  width: 60%;
+  animation: translateanimate 2s ease-in-out;
+}
+
+@keyframes translateanimate {
+  from {
+    transform: translate(50%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(0%);
+    opacity: 1;
+  }
+}
+
+header .shoes .back {
+  position: absolute;
+  top: 12%;
+  left: 15%;
+  z-index: -1;
+  width: 33%;
+  animation: offeranimate 3s ease-in-out;
+}
+
+@keyframes offeranimate {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+header .button {
+  display: flex;
+  justify-content: center;
+}
+
+header .button .btn2 {
+  font-size: 1.5rem;
+  border: 2px solid grey;
+  border: none;
+  background-color: #4b7bec;
+  border-radius: 5rem;
+  font-family: "Work Sans", sans-serif;
+  cursor: pointer;
+  padding: 1.5rem 3.5rem;
+  transition: 0.3s linear;
+}
+
+
+header .button .btn2 a {
+  text-decoration: none;
+  color: azure;
+}
+
+header .button .btn2:hover {
+  color: white;
+  background-color: #4b4f58;
+}
+
+/* ---------------sections--------------- */
+
+/* ---------section one------------------- */
+/* heading */
+.one .heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10rem;
+}
+
+.one .heading h2 {
+  font-size: 10vw;
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+}
+
+@keyframes headinganimate {
+  from {
+    transform: translate(-50%) skew(0);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(0%) skew(-30deg);
+    opacity: 1;
+  }
+}
+
+.one .heading h3 {
+  font-size: 5vw;
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+}
+
+/* ---------section two------------ */
+
+/*  -------------slider------------ -- */
+.carousel {
+  background: transparent;
+  margin-top: 10rem;
+}
+
+.carousel-cell {
+  width: 70%;
+  height: 200px;
+  /* flex-box, center image in cell */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.carousel-cell img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  /* dim unselected */
+  opacity: 1;
+  -webkit-transform: scale(0.85);
+  transform: scale(0.85);
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s, transform 0.3s,
+    -webkit-filter 0.3s, filter 0.3s;
+  transition: opacity 0.3s, transform 0.3s, filter 0.3s;
+}
+
+/* brighten selected image */
+.carousel-cell.is-selected img {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-filter: none;
+  filter: none;
+}
+
+@media screen and (min-width: 768px) {
+  .carousel-cell {
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .carousel-cell {
+    width: 60%;
+  }
+}
+
+/* buttons, no circle */
+.flickity-prev-next-button {
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  opacity: 1;
+}
+
+.flickity-prev-next-button:hover {
+  background: transparent;
+  opacity: 1;
+}
+
+/* arrow color */
+.flickity-prev-next-button .arrow {
+  fill: white;
+}
+
+.flickity-prev-next-button.no-svg {
+  color: white;
+}
+
+/* closer to edge */
+.flickity-prev-next-button.previous {
+  left: 0;
+}
+
+.flickity-prev-next-button.next {
+  right: 0;
+}
+
+/* hide disabled button */
+.flickity-prev-next-button:disabled {
+  display: none;
+}
+
+.flickity-prev-next-button.next {
+  right: 10px;
+  background: #4b7bec;
+}
+
+.flickity-prev-next-button.previous {
+  left: 10px;
+  background: #4b7bec;
+}
+
+.carousel .carousel-cell .cover {
+  background-color: chartreuse;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dfe6e9;
+}
+
+.carousel .carousel-cell .cover .text {
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+  font-size: 2rem;
+  color: black;
+}
+
+.carousel .carousel-cell .cover .line {
+  position: absolute;
+  font-family: "Work Sans", sans-serif;
+  font-size: 2rem;
+  color: #00b894;
+  text-decoration: line-through;
+}
+
+/* ------------section three---------- */
+
+.flex img {
+  width: 60%;
+  height: auto;
+  flex-wrap: wrap;
+}
+
+.flex {
+  background-color: #e7ecf2;
+  display: flex;
+  margin-top: 15rem;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.align {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: auto;
+  margin-right: 2rem;
+}
+
+.align .up1 {
+  font-size: 3rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.align .up2 {
+  margin-top: 5rem;
+  font-size: 8rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.align p {
+  margin-top: 2rem;
+  font-size: 3rem;
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+}
+
+/* ------------section four---------- */
+.four {
+  margin: 10rem 5%;
+}
+
+.containers {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+.container1,
+.container2,
+.container3,
+.container4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: max-content;
+  margin: 0rem 2rem;
+}
+
+.four .containers h1 {
+  font-size: 12rem;
+  color: rgba(29, 53, 58, 0.1);
+  font-family: "Poppins", sans-serif;
+}
+
+.four .containers h2 {
+  font-size: 3.2rem;
+  font-family: "Poppins", sans-serif;
+  color: #3a3a3a;
+  position: relative;
+  bottom: 40%;
+  z-index: 2;
+}
+
+.four .containers h3 {
+  color: #4b4f58;
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 100;
+}
+
+/* ------------section five---------- */
+.five .overlay {
+  background-image: linear-gradient(rgba(5, 0, 5, 0.6), rgba(5, 0, 15, 0.88)),
+    url(../images/back2.jpg);
+  background-attachment: scroll;
+  height: 75vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+}
+
+.five .written {
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.five .written .text2,
+.text1,
+.text3 {
+  color: white;
+}
+
+.five .written .text1 {
+  font-size: 2.5rem;
+  font-family: "Poppins", sans-serif;
+  padding: 2rem 0rem;
+  letter-spacing: 0.1rem;
+}
+
+.five .written .text2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 8.5rem;
+}
+
+.five .written .text3 {
+  font-size: 2rem;
+  font-family: "Work Sans", sans-serif;
+  padding: 5rem 5rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* ----------------footer---------------- */
+footer .site-primary-footer {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+footer .Connect {
+  font-size: 1.6rem;
+  font-family: "Work Sans", sans-serif;
+  line-height: 1.5;
+}
+
+footer .Connection .bolder {
+  font-size: 1.8rem;
+  font-family: "Poppins", sans-serif;
+  line-height: 3;
+}
+
+footer .Follow .right_first button {
+  border: 2px solid black;
+  border-radius: 50%;
+  border: none;
+  width: 3rem;
+  height: 3rem;
+  margin: 0.2rem;
+  background-color: #C2C2C273;
+  cursor: pointer;
+}
+
+footer .Follow .right_first .social1:hover {
+  color: #4267B2;
+}
+
+footer .Follow .right_first .social2:hover {
+  color: #1DA1F2;
+}
+
+footer .Follow .right_first .social3:hover {
+  color: #C13584;
+}
+
+footer .Follow .right_first .social4:hover {
+  color: #FF0000;
+}
+
+footer .Follow .right_first .social5:hover {
+  color: #0077b5;
+}
+
+footer .site-secondary-footer {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+footer .site-secondary-footer .down,
+.powered {
+  font-size: 1.5rem;
+  font-family: "Work Sans", sans-serif;
+  padding: 0rem 6rem;
+}
+
+footer .site-secondary-footer .down .credit {
+  text-decoration: none;
+  color: #2f9ee2;
+}

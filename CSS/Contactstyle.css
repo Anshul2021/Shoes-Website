@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/* --------------header-------------- */
+header {
+    height: auto;
+}
+
+header .logo {
+    float: left;
+    margin: 1.2rem 4rem;
+    height: 4.5rem;
+    width: auto;
+}
+
+/* -------------navigation bar------------ */
+.navbar {
+    padding: 1.5rem 0rem;
+    margin: 2rem 4rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul a {
+    text-decoration: none;
+}
+
+.navbar ul li {
+    color: #4b4f58;
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+    font-family: "Work Sans", sans-serif;
+}
+
+.navbar ul li:hover {
+    color: #2f9ee2;
+    transition: 0.2s linear;
+}
+
+.navbar ul .btn1 {
+    padding: 0.9rem 0.9rem;
+    background: transparent;
+    color: #2f9ee2;
+    border: 2px solid #2f9ee2;
+    border-radius: 0px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.navbar ul .btn1:hover {
+    background-color: #4b7bec;
+    color: white;
+    transition: 0.3s ease-in;
+}
+
+.navbar ul .btn1 .fa-shopping-bag {
+    padding: 2px 8px;
+}
+
+/* ----------------section contact----------------- */
+
+.contact {
+    margin: 15rem 0rem 10rem 5rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.contact .up {
+    font-size: 14rem;
+    color: #0000000d;
+}
+
+.contact .down {
+    font-size: 6rem;
+    position: relative;
+    bottom: 6rem;
+    color: #3a3a3a;
+}
+
+/* ---------------info------------- */
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #f7f7f8; */
+    width: 100%;
+    height: auto;
+}
+
+.info .parents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 4rem;
+}
+
+.info .NUM {
+    font-family: "Poppins", sans-serif;
+    font-size: 3rem;
+    padding: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+.info .Method {
+    font-family: "Work Sans", sans-serif;
+    font-size: 1.5rem;
+}
+
+/* ---------------map----------------- */
+.map {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+    margin-top: 10rem;
+}
+
+.map .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: calc(100% - 600px);
+    height: auto;
+    padding-left: 10rem;
+    background-color: #f7f7f7;
+    color: #3a3a3a;
+}
+
+
+.map .right .top {
+    font-family: "Poppins", sans-serif;
+    font-size: 5.5rem;
+}
+
+.map .right .detailing {
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+}
+
+.map .right .similar {
+    font-family: "Work Sans", sans-serif;
+    font-size: 1.5rem;
+}
+
+
+
+/* ----------------footer---------------- */
+footer .site-primary-footer {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+footer .Connect {
+    font-size: 1.6rem;
+    font-family: "Work Sans", sans-serif;
+    line-height: 1.5;
+}
+
+footer .Connection .bolder {
+    font-size: 1.8rem;
+    font-family: "Poppins", sans-serif;
+    line-height: 3;
+}
+
+footer .Follow .right_first button {
+    border: 2px solid black;
+    border-radius: 50%;
+    border: none;
+    width: 3rem;
+    height: 3rem;
+    margin: 0.2rem;
+    background-color: #C2C2C273;
+    cursor: pointer;
+}
+
+footer .Follow .right_first .social1:hover {
+    color: #4267B2;
+}
+
+footer .Follow .right_first .social2:hover {
+    color: #1DA1F2;
+}
+
+footer .Follow .right_first .social3:hover {
+    color: #C13584;
+}
+
+footer .Follow .right_first .social4:hover {
+    color: #FF0000;
+}
+
+footer .Follow .right_first .social5:hover {
+    color: #0077b5;
+}
+
+footer .site-secondary-footer {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+footer .site-secondary-footer .down,
+.powered {
+    font-size: 1.5rem;
+    font-family: "Work Sans", sans-serif;
+    padding: 0rem 6rem;
+}
+
+footer .site-secondary-footer .down .credit {
+    text-decoration: none;
+    color: #2f9ee2;
+}
